@@ -1,0 +1,16 @@
+<section class="section">
+        <table class="table">
+            <thead>
+                <tr>
+                    <td><b>Company</b></td>
+                    <td><b>Device</b></td>
+                </tr>
+            </thead>
+            ${listOfSmartphones.map(phone =>
+                    `<tr>
+                        <td>${phone.company}</td>
+                        <td>${phone.device}</td>
+                    </tr>`
+                ).join('')}
+        </table>
+    </section>

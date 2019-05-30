@@ -6,11 +6,13 @@ const express = require('express'),
 
 const indexRouter = require('./routes/index');
 const usersRouter = require('./routes/users');
+const dogsRouter = require('./routes/dogs');
+const electronicsRouter = require('./routes/electronics');
 
 const app = express();
 
 app.engine('html', es6Renderer);
-app.set('views', 'views');
+app.set('views', './views');
 app.set('view engine', 'html');
 
 app.use(logger('dev'));
@@ -21,5 +23,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
+app.use('/dogs', dogsRouter);
+app.use('/electronics', electronicsRouter);
 
 module.exports = app;
