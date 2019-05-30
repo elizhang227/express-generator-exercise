@@ -8,7 +8,7 @@ router.get('/', function(req, res, next) {
       title: 'Testing if the home page works'
     },
     partials : {
-      content: 'partial-dogs'
+      content: 'partial-ceos'
     }
   });
 });

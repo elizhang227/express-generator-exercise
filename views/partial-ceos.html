@@ -1,0 +1,21 @@
+<!-- <section>
+    <p>This is partial text for the CEOS</p>
+    <p></p>${executiveList}</p>
+</section> -->
+
+<section class="section">
+        <table class="table">
+            <thead>
+                <tr>
+                    <td>CEO Name</td>
+                    <td>CEO Year</td>
+                </tr>
+            </thead>
+            ${executiveList.map(exec =>
+                    `<tr>
+                        <td>${exec.name}</td>
+                        <td>${exec.year}</td>
+                    </tr>`
+                ).join('')}
+        </table>
+    </section>

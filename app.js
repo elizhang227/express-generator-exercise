@@ -8,6 +8,7 @@ const indexRouter = require('./routes/index');
 const usersRouter = require('./routes/users');
 const dogsRouter = require('./routes/dogs');
 const electronicsRouter = require('./routes/electronics');
+const ceosRouter = require('./routes/ceos');
 
 const app = express();
 
@@ -25,5 +26,6 @@ app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/dogs', dogsRouter);
 app.use('/electronics', electronicsRouter);
+app.use('/ceos', ceosRouter);
 
 module.exports = app;
