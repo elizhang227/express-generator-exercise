@@ -31,8 +31,11 @@ router.post('/', (req, res) => {
             partials: {
                 content: 'partial-ceos'
             }
-        })
+        });
+    })
+    .catch((err) => {
+        res.sendStatus(500).send(err.message);
     });
-})
+});
 
 module.exports = router;
