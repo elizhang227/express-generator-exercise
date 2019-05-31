@@ -1,0 +1,51 @@
+<section class="section">
+        <table class="table">
+            <thead>
+                <tr>
+                    <td>Restaurant</td>
+                    <td>Distance</td>
+                    <td>Stars</td>
+                    <td>Category</td>
+                    <td>Favorite Dish</td>
+                    <td>Takeout</td>
+                </tr>
+            </thead>
+            ${restaurantList.map(restaurant =>
+                    `<tr>
+                        <td>${restaurant.name}</td>
+                        <td>${restaurant.distance}</td>
+                        <td>${restaurant.stars}</td>
+                        <td>${restaurant.category}</td>
+                        <td>${restaurant.favorite}</td>
+                        <td>${restaurant.takeout}</td>
+                    </tr>`
+                ).join('')}
+        </table>
+    </section>
+
+<section class="section">
+    <p>Add a New Restaurant</p>
+    <form action="/ceos" method="POST">
+            <label>Name:
+                <input type="text" name="name">
+            </label>
+            <label>Distance:
+                <input type="text" name="year">
+            </label>
+            <label>Stars:
+                    <input type="text" name="year">
+            </label>
+            <label>Category:
+                    <input type="text" name="year">
+                </label>
+            <label>Favorite Dish:
+                <input type="text" name="year">
+            </label>
+            <label>Takeout (yes/no):
+                    <input type="text" name="year">
+            </label>
+        <div class="button">
+            <button type="submit">Submit your Restaurant!</button>
+        </div>
+    </form>
+</section>

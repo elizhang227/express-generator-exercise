@@ -9,6 +9,7 @@ const usersRouter = require('./routes/users');
 const dogsRouter = require('./routes/dogs');
 const electronicsRouter = require('./routes/electronics');
 const ceosRouter = require('./routes/ceos');
+const restaurantRouter = require('./routes/restaurant');
 
 const app = express();
 
@@ -27,5 +28,6 @@ app.use('/users', usersRouter);
 app.use('/dogs', dogsRouter);
 app.use('/electronics', electronicsRouter);
 app.use('/ceos', ceosRouter);
+app.use('/restaurants', restaurantRouter);
 
 module.exports = app;
