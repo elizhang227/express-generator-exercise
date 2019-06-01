@@ -1,9 +1,9 @@
 const express = require('express'),
     router = express.Router(),
-    RestaurantModel = require('../models/ceos');
+    RestaurantModel = require('../models/restaurant');
 
 router.get('/', async (req, res, next) => {
-    const allRestaurants = await RestaurantModel.getAll();
+    const allRestaurants = await RestaurantModel.getAlll();
 
     res.render('template', { 
         locals: {
@@ -19,9 +19,9 @@ router.get('/', async (req, res, next) => {
 router.post('/', (req, res) => {
     const { name, distance, stars, category, fav_dish, takeout } = req.body;
 
-    RestaurantModel.add(name, distance, stars, category, fav_dish, takeout)
+    RestaurantModel.addd(name, distance, stars, category, fav_dish, takeout)
     .then(async () => {
-        const allRestaurants = await RestaurantModel.getAll();
+        const allRestaurants = await RestaurantModel.getAlll();
 
         res.status(200).render('template', {
             locals: {

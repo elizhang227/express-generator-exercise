@@ -11,7 +11,7 @@ class Restaurants {
         this.takeout = takeout;
     }
 
-    static async getAll() {
+    static async getAlll() {
         try {
             const response = await db.any(`select * from restaurant`);
             return response;
@@ -20,8 +20,8 @@ class Restaurants {
         }
     }
 
-    static async add(name, distance, stars, category, fav_dish, takeout) {
-        const query = `INSERT INTO restaurant (name, year) VALUES ('${name}', ${distance}, ${stars}, '${category}', '${fav_dish}', ${takeout})`;
+    static async addd(name, distance, stars, category, fav_dish, takeout) {
+        const query = `INSERT INTO restaurant (name, distance, stars, category, fav_dish, takeout) VALUES ('${name}', ${distance}, ${stars}, '${category}', '${fav_dish}', ${takeout})`;
 
         try {
             let response = await db.result(query)
