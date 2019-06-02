@@ -7,7 +7,7 @@ class Executives {
         this.year = year;
     }
 
-    static async getAll() {
+    static async getAllCeos() {
         try {
             const response = await db.any(`select * from ceos`);
             return response;
@@ -16,7 +16,7 @@ class Executives {
         }
     }
 
-    static async add(name, year) {
+    static async addCeos(name, year) {
         const query = `INSERT INTO ceos (name, year) VALUES ('${name}', ${year})`;
 
         try {
