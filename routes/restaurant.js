@@ -18,6 +18,7 @@ router.get('/', async (req, res, next) => {
 
 router.post('/', (req, res) => {
     const { name, distance, stars, category, fav_dish, takeout } = req.body;
+    console.log(req.body);
 
     RestaurantModel.addRestaurant(name, distance, stars, category, fav_dish, takeout)
     .then(async () => {
